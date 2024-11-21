@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google maps web app api</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (g => {
+      var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window;
+      b = b[c] || (b[c] = {});
+      var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => {
+        await (a = m.createElement("script"));
+        e.set("libraries", [...r] + "");
+        for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]);
+        e.set("callback", c + ".maps." + q);
+        a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+        d[q] = f;
+        a.onerror = () => h = n(Error(p + " could not load."));
+        a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+        m.head.append(a);
+      }));
+      d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n));
+    })({
+      key: "AIzaSyCsGl4s0BvZSQm75Wv7JO4cMmQudYmMG1E",
+      v: "weekly",
+      libraries: "marker",
+      mapIds: "125ad7ffc6402a94", // Sostituisci con il tuo Map ID
+    });
+  </script>
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js" defer></script>
+  <script src="modules/map.js" type="module" defer></script>
+  <script src="modules/markers.js" type="module" defer></script>
+  <script type="module" src="modules/infoWindow.js" defer></script>
+  <script src="script.js" type="module" defer></script>
+</head>
+<body>
+  <div id="allPage">
+    <header>
+      <h2>Store locator</h2>
+      <h3>Stores visible on map: <span id="storesAmountContainer"></span></h3>
+      <ul id="storesDropdown">
+      </ul>
+    </header>
+      <div id="drawer">
+        <div id="categoryButtonsContainer">
+          <button data-filter="all">Tutti</button>
+          <button data-filter="computer">Computer</button>
+          <button data-filter="tv">TV</button>
+          <button data-filter="smartphone">Smartphone</button>
+        </div>
+        <div id="searchContainer">
+          <input type="search" placeholder="filtra per nome o per indirizzo">
+        </div>
+        <div id="storesList">
+          <!-- stores -->
+        </div>
+      </div>
+      <div id="map"></div>
+  </div>
+</body>
+</html>

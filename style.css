@@ -1,0 +1,172 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#allPage {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  grid-template-rows: 44px 1fr;
+  grid-template-areas: 
+  'header header'
+  'drawer map'
+  ;
+}
+
+header {
+  grid-area: header;
+  background-color: rgb(48, 48, 106);
+  height: 30px;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 0.5rem;
+  align-items: center;
+  align-content: center;
+}
+
+header span {
+  padding: 5px;
+  color: gold;
+  position: relative;
+  cursor: pointer;
+}
+
+#storesDropdown {
+  display: none;
+  position: absolute;
+  height: calc(100vh - 44px);
+  width: 250px;
+  top: 25px;
+  right: 0;
+  z-index: 9;
+  overflow: auto;
+}
+
+#storesDropdown li{
+  font-size: 1.2rem;
+  list-style-type: none;
+  background-color: rgba(48, 48, 106, 0.793);
+  padding: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#storesDropdown a {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+#storesDropdown span {
+  margin: 0;
+}
+
+.go {
+  background-color: green;
+  border-radius: 5px 10px;
+}
+
+#drawer {
+  grid-area: drawer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 44px 1fr;
+  background-color: lightgray;
+  grid-template-areas: 
+  'btn'
+  'input'
+  'stores'
+  ;
+}
+
+#categoryButtonsContainer {
+  max-height: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  margin-top: 15px;
+  grid-area: btn;
+}
+
+#categoryButtonsContainer button {
+  padding: 5px;
+  border: none;
+  background-color: gray;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#categoryButtonsContainer button:hover {
+  background-color: rgb(236, 182, 75);
+  transform: scale(1.1);
+}
+
+.zoomBtn {
+  background-color: blue!important;
+}
+
+.active {
+  background-color: green!important;
+}
+
+#searchContainer {
+  width: 100%;
+  grid-area: input;
+  margin: 5px 15px;
+}
+
+#searchContainer input {
+  width: 90%;
+}
+
+#storesList {
+  border-top: 1px solid gray;
+  grid-area: stores;
+  max-height: calc(100vh - 108px - 40px);
+  overflow: auto;
+}
+
+#storesList div {
+  color: white;
+  background-color: rgb(41, 41, 98);
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  border-radius: 10px;
+}
+
+#storesList div:hover {
+  opacity: 0.8;
+  cursor: grab;
+}
+
+#storesList h3 {
+  margin: 0;
+}
+
+#storesList div p:nth-last-child(2){
+  margin-bottom: 40px;
+}
+
+#storesList a {
+  color: white;
+  text-decoration: none;
+  background-color: green;
+  padding: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 5px;
+}
+
+#map {
+  grid-area: map;
+  height: 94.8vh
+}
