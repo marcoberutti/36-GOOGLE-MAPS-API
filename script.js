@@ -1,4 +1,4 @@
-// apiKey= 'AIzaSyCsGl4s0BvZSQm75Wv7JO4cMmQudYmMG1E'
+
 import {initMap } from "./modules/map.js";
 import { getStores } from "./modules/stores.js";
 import { globalVar, stores, map, myCoords, storesAmountContainer } from "./modules/config.js";
