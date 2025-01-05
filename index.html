@@ -22,7 +22,7 @@
       }));
       d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n));
     })({
-      key: "AIzaSyCsGl4s0BvZSQm75Wv7JO4cMmQudYmMG1E",
+      key: process.env.APIKEY,
       v: "weekly",
       libraries: "marker",
       mapIds: "125ad7ffc6402a94", // Sostituisci con il tuo Map ID
