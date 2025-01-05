@@ -1,5 +1,3 @@
-import apiKeyLocal from './config.js';
-
 const loadGoogleMapsAPI = (config) => {
  // Costanti di base
  const API_NAME = "The Google Maps JavaScript API";
