@@ -1,8 +1,15 @@
 {
   "dependencies": {
-    "@googlemaps/markerclusterer": "^2.5.3"
+    "@googlemaps/markerclusterer": "^2.5.3",
+    "vite": "^6.0.7"
   },
   "devDependencies": {
     "dotenv-webpack": "^8.1.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   }
+  
 }

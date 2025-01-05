@@ -72,7 +72,7 @@ const loadGoogleMapsAPI = (config) => {
    };
  }
 };
-
+const apiKey = import.meta.env.VITE_APIKEY;
 // Configurazione che usa la chiave API in base all'ambiente
 const isLocal = window.location.hostname === 'localhost' || 
               window.location.hostname === '127.0.0.1' ||
@@ -81,7 +81,7 @@ const isLocal = window.location.hostname === 'localhost' ||
               window.location.hostname.startsWith('172.16.');
 // "AIzaSyCsGl4s0BvZSQm75Wv7JO4cMmQudYmMG1E"
 const config = {
- key: process.env.APIKEY,
+ key: apiKey,
  v: "weekly",
  libraries: "marker",
  mapIds: "125ad7ffc6402a94"
