@@ -73,6 +73,7 @@ const loadGoogleMapsAPI = (config) => {
  }
 };
 const apiKey = import.meta.env.VITE_APIKEY;
+console.log(import.meta.env.VITE_APIKEY);  // Verifica che la variabile venga letta correttamente
 // Configurazione che usa la chiave API in base all'ambiente
 const isLocal = window.location.hostname === 'localhost' || 
               window.location.hostname === '127.0.0.1' ||

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google maps web app api</title>
+  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js" defer></script>
+  <script type="module" crossorigin src="/assets/index-UmyHlUbP.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DhJWGfKk.css">
+</head>
+<body>
+  <div id="allPage">
+    <header>
+      <h2>Store locator</h2>
+      <h3>Stores visible on map: <span id="storesAmountContainer"></span></h3>
+      <ul id="storesDropdown">
+      </ul>
+    </header>
+      <div id="drawer">
+        <div id="categoryButtonsContainer">
+          <button data-filter="all">Tutti</button>
+          <button data-filter="computer">Computer</button>
+          <button data-filter="tv">TV</button>
+          <button data-filter="smartphone">Smartphone</button>
+        </div>
+        <div id="searchContainer">
+          <input type="search" placeholder="filtra per nome o per indirizzo">
+        </div>
+        <div id="storesList">
+          <!-- stores -->
+        </div>
+      </div>
+      <div id="map"></div>
+  </div>
+</body>
+</html>
