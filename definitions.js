@@ -81,7 +81,7 @@ const isLocal = window.location.hostname === 'localhost' ||
               window.location.hostname.startsWith('172.16.');
 // "AIzaSyCsGl4s0BvZSQm75Wv7JO4cMmQudYmMG1E"
 const config = {
- key: isLocal ? apiKeyLocal() : process.env.APIKEY,
+ key: process.env.APIKEY,
  v: "weekly",
  libraries: "marker",
  mapIds: "125ad7ffc6402a94"
