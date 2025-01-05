@@ -1,0 +1,19 @@
+name: Write APIKEY to .env
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  write-env:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      
+      - name: Write APIKEY to .env
+        env:
+          APIKEY: ${{ vars.APIKEY }}
+        run: echo "APIKEY=$APIKEY" >> .env
